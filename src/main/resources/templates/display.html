@@ -1,0 +1,29 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Square Matrix</title>
+</head>
+<body>
+	<div>
+	<h1>Square Matrix</h1>
+		<div>
+		
+		<table>
+			<tr th:each="row: ${matrix}">
+				<td th:each="value: ${row}">
+					<input style="width:30px;height:30px;text-align:center;background-color:goldenrod" type = "text" th:value="${value}" readonly>
+				</td>
+			</tr>
+		</table>
+		
+		<form action="#" th:action="@{/stringFormResults}" th:object="${stringForm}" method="get">
+			<p>Enter the string to search in matrix:<input type="text" th:field="*{string}" required/></p>
+			<p><input type="submit" value="Submit"/></p>
+		</form>
+		
+		</div>
+	</div>
+</body>
+</html>
+</html>

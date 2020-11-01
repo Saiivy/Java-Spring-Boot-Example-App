@@ -1,0 +1,19 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Square Matrix Form</title>
+	</head>
+	<body>
+		<div>
+		
+			<form action="#" th:action="@{/matrixFormResults}" th:object="${squareMatrix}" method="get">
+				<h1>Square Matrix Form</h1>
+				<p>Enter the length of the square matrix:<input type="number" name="legthOfMatrix" min="5" max="15" th:field="*{length}" required/></p>
+				<p><input type="submit" value="Submit"/></p>
+			</form>
+						
+		</div>
+	</body>
+</html>
+</html>
